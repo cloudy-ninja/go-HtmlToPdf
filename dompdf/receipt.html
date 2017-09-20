@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+        <?php echo $title;?>
+    </title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <style type="text/css">
+        /**
+ * NOTE : This file NEEDS a locally located stylesheet to generate the appropriate formatting for
+ * transformation into a PDF.  If you alter this file (and you are encouraged to do so) just
+ * keep in mind that all of your formatting must be located here.  You might also find that
+ * there is limited or no support for a specific CSS style you want (ie: floating) and you'll
+ * need to work around with old-school tables.  Sorry for that... ;)
+ *
+ *
+ * NOTE : Things have changed since I used domPDF with PHP. See latest updates on how
+ * domPDF renders CSS at https://github.com/zimmski/dompdf
+ *
+ * - SocketLoop.com - Adam
+ */
+        
+        body {
+            width: 100%;
+            margin: 0.5in;
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        li,
+        blockquote,
+        p,
+        th,
+        td {
+            font-family: Helvetica, Arial, Verdana, sans-serif;
+            /*Trebuchet MS,*/
+        }
+        
+        h1,
+        h2,
+        h3 {
+            color: #5E88B6;
+            font-weight: normal;
+        }
+        
+        h4,
+        h5,
+        h6 {
+            color: #000;
+            font-size: 12px;
+        }
+        
+        h2 {
+            margin: 0 auto auto auto;
+            font-size: x-large;
+        }
+        
+        h2 span {
+            text-transform: uppercase;
+        }
+        
+        li,
+        blockquote,
+        p,
+        th,
+        td {
+            font-size: 80%;
+        }
+        
+        ul {
+            list-style: url('../images/system/bullet.gif') none;
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        td {
+            padding: 7px 15px;
+        }
+        
+        td p {
+            font-size: small;
+            margin: 0;
+        }
+        
+        td h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+        }
+        
+        thead,
+        tfoot {
+            background-color: black;
+            color: white
+        }
+        
+        th {
+            color: #FFF;
+            text-align: left;
+            background-color: #000000;
+        }
+        
+        .invoice_words {
+            color: #000;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: left;
+            text-transform: uppercase;
+        }
+        
+        .invoice_total {
+            color: #000;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: right;
+            text-transform: uppercase;
+        }
+        
+        #footer {
+            border-top: 1px solid #CCC;
+            text-align: right;
+            font-size: 16px;
+            color: #999999;
+        }
+        
+        #footer a {
+            color: #999999;
+            text-decoration: none;
+        }
+        
+        table.stripe {
+            border-collapse: collapse;
+            page-break-after: auto;
+        }
+        
+        table.stripe td {
+            border-bottom: 1pt solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td width="60%">
+                <h1>
+                    <img src="https://d1ohg4ss876yi2.cloudfront.net/preview/golang.png" /> Receipt
+                    <br />
+                </h1>
+                <br />
+            </td>
+            <td>
+                <h2>
+                    [company name]<br />
+                </h2>
+                <p>
+                    [your street address]<br/> Email: [your email address]<br />
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <h3> You can add more data here or modify the CSS.... use your imagination! </h3>
+
+</body>
+
+</html>
